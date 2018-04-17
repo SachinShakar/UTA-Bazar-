@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:textSize="28sp"
+        tools:context="com.advse.universitybazaar.posts.PostDetailsActivity">
+
+    <EditText
+        android:id="@+id/postHeading"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Heading"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/transparent"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        app:layout_constraintTop_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/descLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Description"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/postHeading"/>
+
+    <EditText
+        android:id="@+id/postDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Post Description"
+        android:backgroundTint="@android:color/transparent"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        app:layout_constraintTop_toBottomOf="@+id/descLabel"/>
+
+    <TextView
+        android:id="@+id/locationLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Location"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/postDescription"/>
+
+    <EditText
+        android:id="@+id/postLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:textStyle="bold"
+        android:backgroundTint="@android:color/transparent"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        app:layout_constraintTop_toBottomOf="@+id/locationLabel"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeL"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        app:layout_constraintTop_toBottomOf="@id/postLocation">
+        <Button
+            android:id="@+id/updatePost"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:textSize="18sp"
+            android:letterSpacing="0.25"
+            android:text="Update" />
+        <Button
+            android:id="@+id/deletePost"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="18sp"
+            android:letterSpacing="0.25"
+            android:layout_toRightOf="@id/updatePost"
+            android:text="Delete" />
+        <Button
+            android:id="@+id/savePost"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="18dp"
+            android:letterSpacing="0.25"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/updatePost"
+            android:visibility="gone"
+            android:text="Save" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/commentLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Comments"
+        android:layout_marginTop="5dp"
+        android:gravity="left"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/relativeL"/>
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:id="@+id/scroll"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/commentLabel">
+
+        <TableLayout
+            android:id="@+id/tableComments"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp">
+
+        </TableLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/commentLayout"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/postComment"
+            android:layout_width="280dp"
+            android:layout_height="40dp"
+            android:hint="Add Comment"
+            android:textSize="16sp"
+            android:inputType="text"
+            android:background="@android:color/holo_orange_dark"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="parent"/>
+        <Button
+            android:id="@+id/postCommentButton"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="2dp"
+            android:textColor="@android:color/black"
+            android:text="SEND"
+            android:textSize="12sp"
+            android:layout_toRightOf="@id/postComment" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

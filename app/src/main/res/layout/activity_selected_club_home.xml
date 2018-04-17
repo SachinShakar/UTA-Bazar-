@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/requestMembership"
+        android:layout_width="match_parent"
+        android:background="@android:color/holo_blue_dark"
+        android:alpha="0.9"
+        android:textColor="#FFFFFF"
+        android:layout_height="70dp" />
+
+    <Button
+        android:id="@+id/deleteClub"
+        android:layout_width="match_parent"
+        android:textColor="#FFFFFF"
+        android:background="@android:color/holo_red_dark"
+        android:layout_height="70dp" />
+
+    <TextView
+        android:id="@+id/displayClubDescription"
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:textSize="16dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/displayClubOwner"
+        android:layout_width="match_parent"
+        android:layout_marginTop="25dp"
+        android:textSize="20dp"
+        android:background="@android:color/holo_orange_light"
+        android:alpha="0.7"
+        android:textColor="@android:color/white"
+        android:layout_height="25dp" />
+
+
+    <ListView
+        android:id="@+id/listOfStudents"
+        android:layout_width="368dp"
+        android:layout_height="231dp"
+        android:layout_marginBottom="1dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"/>
+
+</LinearLayout>

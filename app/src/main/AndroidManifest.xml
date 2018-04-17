@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.advse.universitybazaar">
+
+    <uses-sdk
+        android:minSdkVersion="23"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme">
+        <activity android:name=".register.RegisterActivity" />
+        <activity android:name=".register.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".register.UserHome" />
+        <activity android:name=".clubs.ClubHome" />
+        <activity android:name=".clubs.CreateClubActivity" />
+        <activity android:name=".clubs.SelectedClubHome" />
+        <activity android:name=".messages.MessageHome" />
+        <activity android:name=".posts.PostHome" />
+        <activity
+            android:name=".trade.TradeActivity"
+            android:label="@string/title_activity_trade" />
+        <activity android:name=".trade.SellItemActivity" />
+        <activity android:name=".trade.BoughtItemsActivity" />
+        <activity android:name=".trade.ItemDetails" />
+        <activity android:name=".trade.AllItemsActivity" />
+        <activity android:name=".trade.PostedItemsActivity" />
+        <activity android:name=".posts.NewPostActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".posts.MyPostActivity" />
+        <activity android:name=".posts.OthersPostActivity" />
+        <activity android:name=".posts.PostDetailsActivity" android:windowSoftInputMode="stateHidden"></activity>
+    </application>
+
+</manifest>
